@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Common Weights</title>
-<meta name="description" content="Open-weight model distribution that no company, court order, or government can switch off in one place.">
+<meta name="description" content="Open models, kept by everyone. Common Weights keeps every model on your machine in one place, and shares it with a worldwide network of everyone who runs it.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
   :root {
-    --bg: #faf9f5;
+    --bg: #ffffff;
     --fg: #141413;
     --muted: #5e5d59;
     color-scheme: light dark;
@@ -32,20 +32,38 @@
     font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   main { max-width: 34rem; text-align: center; }
-  img { width: 96px; height: 96px; }
-  h1 { margin: 1.25rem 0 0.5rem; font-size: 2rem; letter-spacing: -0.01em; }
+  h1 { margin: 0 0 1.5rem; line-height: 0; }
+  h1 img { width: min(100%, 20rem); height: auto; }
   p { margin: 0 0 1rem; }
+  .headline { font-size: 1.375rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .benefits {
+    list-style: none;
+    margin: 1.75rem auto;
+    padding: 0;
+    max-width: 28rem;
+    text-align: left;
+  }
+  .benefits li { margin-bottom: 0.625rem; }
+  .stance { font-weight: 600; margin-top: 1.75rem; }
   .status { color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="mark-light.svg">
-    <img src="mark.svg" alt="Common Weights logo">
-  </picture>
-  <h1>Common Weights</h1>
-  <p>Open-weight model distribution that no company, court order, or government can switch off in one place.</p>
+  <h1>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="lockup-horizontal-light.svg">
+      <img src="lockup-horizontal.svg" alt="Common Weights" width="320" height="49">
+    </picture>
+  </h1>
+  <p class="headline">Open models, kept by everyone.</p>
+  <p>Common Weights keeps every model on your machine in one place, and shares it with a worldwide network of everyone who runs it.</p>
+  <ul class="benefits">
+    <li><strong>No wasted disk space.</strong> Ollama, llama.cpp, vLLM and transformers share one copy of each model.</li>
+    <li><strong>Faster, and always there.</strong> Models come from whoever has them nearby, a colleague or the next node in your cluster, and keep downloading when the hub is down.</li>
+    <li><strong>Know what you run.</strong> Every file is checked against what was originally released.</li>
+  </ul>
+  <p class="stance">No company, court or government should be able to make an open model disappear. We'll make sure they can't.</p>
   <p class="status">Coming soon.</p>
 </main>
 </body>
